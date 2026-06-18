@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Website cá nhân của Phạm Hồng Triệu - Sinh viên IT, lập trình viên và người đam mê phát triển phần mềm. Khám phá các dự án, kỹ năng và cách liên hệ.">
+  <meta name="author" content="Phạm Hồng Triệu">
+
+  <title>Phạm Hồng Triệu | Portfolio Cá Nhân</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- LUCIDE ICONS CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <div class="snow-container" id="snowContainer"></div>
+
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="logo" id="navLogo">
+  Phạm Hồng Triệu
+</a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active" id="linkHome">Trang chủ</a></li>
+          <li><a href="#about" class="nav-link" id="linkAbout">Giới thiệu</a></li>
+          <li><a href="#skills" class="nav-link" id="linkSkills">Kỹ năng</a></li>
+          <li><a href="#projects" class="nav-link" id="linkProjects">Dự án</a></li>
+          <li><a href="#contact" class="nav-link" id="linkContact">Liên hệ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Theme Toggle Button -->
+      <button id="themeToggle" class="theme-toggle-btn" aria-label="Thay đổi giao diện">
+        <i id="themeIcon" class="fa-solid fa-moon"></i>
+      </button>
+
+      <div class="hamburger" id="hamburgerMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home">
+      <div class="hero-content">
+        <span class="hero-subtitle">PORTFOLIO CÁ NHÂN ✨</span>
+        <h1 class="hero-title">
+          Mình là <br>
+          <span class="gradient-text">Phạm Hồng Triệu </span>
+        </h1>
+        <h2 class="typing-wrapper">
+          <span class="typing-text"></span>
+        </h2>
+        <p class="hero-desc">
+          Sinh viên Công nghệ Thông tin đam mê lập trình, xây dựng các ứng dụng thực tiễn và không ngừng học hỏi các
+          công nghệ mới để phát triển bản thân.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary" id="btnHeroProjects">
+            <i data-lucide="briefcase"></i> Xem dự án
+          </a>
+          <a href="#contact" class="btn btn-secondary" id="btnHeroContact">
+            <i data-lucide="mail"></i> Liên hệ với mình
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="avatar-wrapper">
+          <img src="assets/images/avatar.jpg" alt="Hồng Triệu Phạm Avatar">
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2 class="section-title">Giới thiệu bản thân</h2>
+      <div class="about-grid">
+        <div class="about-info">
+          <h3>Học tập và Định hướng</h3>
+          <p>
+            Chào các bạn! Mình tên là <strong>Phạm Hồng Triệu</strong>, hiện là sinh viên chuyên ngành Công nghệ thông
+            tin. Ngay từ những ngày đầu bước chân vào giảng đường đại học, mình đã bị cuốn hút bởi lập trình và việc
+            giải quyết các bài toán thông qua dòng code.
+          </p>
+          <p>
+            Mục tiêu nghề nghiệp của mình là trở thành một <strong>Software Engineer</strong> chuyên nghiệp. Mình tập
+            trung nghiên cứu lập trình web hiện đại (HTML/CSS/JS), các ngôn ngữ lập trình phổ biến như Python và Java,
+            cùng với các hệ quản trị cơ sở dữ liệu như SQL Server.
+          </p>
+          <p>
+            Mình thích tạo ra các sản phẩm thực tiễn và chia sẻ chúng trên GitHub để học hỏi kinh nghiệm cũng như cải
+            thiện chất lượng code từ cộng đồng.
+          </p>
+        </div>
+
+        <div class="about-stats-container">
+          <h3
+            style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">
+            Thống kê cá nhân</h3>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-num">03+</span>
+              <span class="stat-label">Dự án hoàn thành</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">05+</span>
+              <span class="stat-label">Ngôn ngữ/Công cụ</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">200+</span>
+              <span class="stat-label">Commits Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+      <h2 class="section-title">Kỹ năng chuyên môn</h2>
+      <div class="skills-grid">
+
+        <!-- Frontend Skills -->
+        <div class="skill-category">
+          <h3 class="skill-category-title">
+            <i data-lucide="layout"></i> Frontend Dev
+          </h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">HTML5</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percentage="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">CSS3 / Responsive</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percentage="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">JavaScript (ES6+)</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percentage="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend Skills -->
+        <div class="skill-category">
+          <h3 class="skill-category-title">
+            <i data-lucide="database"></i> Backend và DB
+          </h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Python</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percentage="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Java (Core & Swing)</span>
+                <span class="skill-pct">75%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percentage="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">SQL Server / DBMS</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percentage="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dev Tools & Workflow -->
+        <div class="skill-category">
+          <h3 class="skill-category-title">
+            <i data-lucide="terminal"></i> Công cụ & Quy trình
+          </h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Git & GitHub</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percentage="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">VS Code / IDEs</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percentage="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Làm việc nhóm / OOP</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percentage="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+      <h2 class="section-title">Dự án tiêu biểu</h2>
+      <div class="projects-carousel">
+        <div class="carousel-container">
+          <button class="carousel-btn prev" id="prevBtn" aria-label="Project trước">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          
+          <div class="carousel-track-wrapper">
+            <div class="carousel-track">
+              <!-- Project 1 -->
+              <div class="project-card">
+                <div class="project-img-wrapper">
+                  <img src="assets/images/project-placeholder.jpg" alt="Hệ thống điểm danh nhận diện khuôn mặt">
+                </div>
+                <div class="project-content">
+                  <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">OpenCV</span>
+                    <span class="project-tag">Tkinter</span>
+                  </div>
+                  <h3 class="project-title">Điểm danh bằng Nhận diện Khuôn mặt</h3>
+                  <p class="project-desc">
+                    Hệ thống tự động nhận diện và ghi nhận điểm danh sinh viên bằng camera. Tích hợp giao diện Tkinter trực
+                    quan, thuật toán nhận diện ổn định, xuất báo cáo Excel tiện lợi.
+                  </p>
+                  <a href="https://github.com/hongtrieu2201-gif/Python" target="_blank" class="project-link" id="linkProj1">
+                    Xem GitHub <i data-lucide="external-link"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Project 2 -->
+              <div class="project-card">
+                <div class="project-img-wrapper">
+                  <img src="assets/images/project-placeholder.jpg" alt="Phần mềm quản lý cửa hàng trà sữa">
+                </div>
+                <div class="project-content">
+                  <div class="project-tags">
+                    <span class="project-tag">Java Swing</span>
+                    <span class="project-tag">SQL Server</span>
+                    <span class="project-tag">JDBC</span>
+                  </div>
+                  <h3 class="project-title">Phần mềm Quản lý Cửa hàng Trà Sữa</h3>
+                  <p class="project-desc">
+                    Ứng dụng desktop quản lý kho, nhập xuất hóa đơn, quản lý doanh thu và thông tin khách hàng. Kết nối trực
+                    tiếp SQL Server, phân quyền người dùng và giao diện tối ưu hóa.
+                  </p>
+                  <a href="https://github.com/hongtrieu2201-gif/QLTraSua" target="_blank" class="project-link" id="linkProj2">
+                    Xem GitHub <i data-lucide="external-link"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Project 3 -->
+              <div class="project-card">
+                <div class="project-img-wrapper">
+                  <img src="assets/images/project-placeholder.jpg" alt="Website portfolio cá nhân">
+                </div>
+                <div class="project-content">
+                  <div class="project-tags">
+                    <span class="project-tag">HTML5</span>
+                    <span class="project-tag">CSS3</span>
+                    <span class="project-tag">JavaScript</span>
+                  </div>
+                  <h3 class="project-title">Website Portfolio Cá Nhân</h3>
+                  <p class="project-desc">
+                    Giao diện website giới thiệu bản thân, kỹ năng và các dự án cá nhân được thiết kế hiện đại, responsive
+                    hoàn toàn trên di động và tối ưu hóa trải nghiệm người dùng.
+                  </p>
+                  <a href="https://github.com/hongtrieu2201-gif" target="_blank" class="project-link" id="linkProj3">
+                    Xem GitHub <i data-lucide="external-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-btn next" id="nextBtn" aria-label="Project kế tiếp">
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+        
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <h2 class="section-title">Liên hệ với mình</h2>
+      <div class="contact-container">
+
+        <div class="contact-info">
+          <div>
+            <h3>Hãy kết nối với mình!</h3>
+            <p>
+              Nếu bạn muốn hợp tác phát triển dự án hoặc chỉ đơn giản là trao đổi về công nghệ, đừng ngần ngại liên hệ
+              với mình qua các kênh dưới đây nhé.
+            </p>
+          </div>
+
+          <div class="contact-methods">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i data-lucide="mail"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <a href="mailto:hongtrieu2201@gmail.com">hongtrieu2201@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+  <i class="fa-brands fa-github"></i>
+</div>
+              <div class="contact-text">
+                <h4>GitHub</h4>
+                <a href="https://github.com/hongtrieu2201-gif" target="_blank">github.com/hongtrieu2201-gif</a>
+              </div>
+            </div>
+          </div>
+
+       <div class="social-links">
+  <a href="https://www.facebook.com/trieuvotris1tg" class="social-icon" title="Facebook" id="socialFb" target="_blank">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+
+  <a href="https://www.linkedin.com/in/hongtrieu2201" class="social-icon" title="LinkedIn" id="socialLinkedin" target="_blank">
+    <i class="fa-brands fa-linkedin-in"></i>
+  </a>
+
+  <a href="https://www.tiktok.com/@_p.tzrieu._2201" class="social-icon" title="TikTok" id="socialTiktok" target="_blank">
+    <i class="fa-brands fa-tiktok"></i>
+  </a>
+</div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="name">Họ và tên</label>
+              <input type="text" id="name" class="form-control" placeholder="Nguyễn Văn A" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Địa chỉ Email</label>
+              <input type="email" id="email" class="form-control" placeholder="email@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Nội dung tin nhắn</label>
+              <textarea id="message" class="form-control" placeholder="Xin chào, mình muốn trao đổi về..."
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="btnSubmitContact"
+              style="width: 100%; font-size: 1rem; padding: 0.9rem;">
+              Gửi lời nhắn <i data-lucide="send"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-text">
+        <p>&copy; 2026 Hồng Triệu Phạm. All rights reserved.</p>
+      </div>
+
+      <div class="back-to-top" id="backToTopBtn" title="Lên đầu trang">
+        <i data-lucide="arrow-up"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/main.js"></script>
+  <script>
+    // Initialize Lucide icons on page load
+    lucide.createIcons();
+
+    // Back to top button functionality
+    const backToTopBtn = document.getElementById('backToTopBtn');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.style.opacity = '1';
+        backToTopBtn.style.visibility = 'visible';
+      } else {
+        backToTopBtn.style.opacity = '0';
+        backToTopBtn.style.visibility = 'hidden';
+      }
+    });
+
+    // Initial hidden state for back to top button
+    backToTopBtn.style.opacity = '0';
+    backToTopBtn.style.visibility = 'hidden';
+    backToTopBtn.style.transition = 'opacity 0.3s ease, visibility 0.3s ease';
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+
+</html>
