@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# phamhongtrieu.github.io
+=======
 # Trang Web Cá Nhân - Hồng Triệu Phạm
 
 Chào mừng bạn đến với dự án Website cá nhân (Portfolio) chuyên nghiệp dành cho sinh viên IT / lập trình viên mới. Trang web này được xây dựng bằng công nghệ web cơ bản (HTML5, CSS3, JavaScript thuần) với mục đích giới thiệu thông tin, kỹ năng, các dự án cá nhân và cung cấp biểu mẫu liên hệ.
@@ -112,3 +115,4 @@ git push -u origin main
 ---
 Chúc bạn có một trang web cá nhân ưng ý và thu hút được nhiều nhà tuyển dụng! 🌟
 Nếu bạn muốn thay đổi ảnh đại diện cá nhân, chỉ cần ghi đè file ảnh mới có tên `avatar.jpg` vào thư mục `assets/images/`.
+>>>>>>> d87d8c1909c753ecb44308b301249c8739d52162
