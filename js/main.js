@@ -163,11 +163,45 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Simulate successful submission
-      showToast('Cảm ơn bạn đã liên hệ! Mình sẽ phản hồi lại sớm nhất có thể.', 'success');
-      
-      // Reset form
-      contactForm.reset();
+      const submitButton = document.getElementById('btnSubmitContact');
+      const originalBtnHtml = submitButton ? submitButton.innerHTML : 'Gửi lời nhắn <i data-lucide="send"></i>';
+
+      // Disable button during submit
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.innerHTML = 'Đang gửi...';
+      }
+
+      // Send form data to Formspree via AJAX
+      const data = new FormData(contactForm);
+      fetch(contactForm.action, {
+        method: contactForm.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          showToast('Cảm ơn bạn đã liên hệ! Mình sẽ phản hồi lại sớm nhất có thể.', 'success');
+          contactForm.reset();
+        } else {
+          showToast('Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại!', 'error');
+        }
+      })
+      .catch(error => {
+        showToast('Có lỗi kết nối mạng. Vui lòng thử lại!', 'error');
+      })
+      .finally(() => {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.innerHTML = originalBtnHtml;
+          // Re-initialize Lucide icons to render the icon in button
+          if (window.lucide) {
+            window.lucide.createIcons();
+          }
+        }
+      });
     });
   }
 
