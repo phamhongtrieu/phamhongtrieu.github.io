@@ -115,8 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
-     5. SKILL BARS ANIMATION ON SCROLL
-     ========================================================================== */
+     5. SKILL BARS ANIMATION ON SCROLL (DISABLED - REMOVED PROGRESS BARS)
+     ==========================================================================
   const skillBars = document.querySelectorAll('.skill-bar-fill');
   
   const animateSkills = (entries, observer) => {
@@ -137,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
   skillBars.forEach(bar => {
     skillsObserver.observe(bar);
   });
+  ========================================================================== */
 
 
   /* ==========================================================================

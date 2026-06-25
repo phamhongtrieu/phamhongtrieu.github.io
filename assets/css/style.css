@@ -1657,3 +1657,329 @@ body, header, section, .project-card, .skill-category, .stat-card, .contact-form
     margin-left: 0 !important; /* Reset any margin */
   }
 }
+
+/* ================= HERO VIDEO BACKGROUND ================= */
+
+#home {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  padding-top: calc(var(--navbar-height) + 20px);
+  background: linear-gradient(135deg, #050816, #0f1028, #080a1f);
+  max-width: none !important; /* Phủ full màn hình, ghi đè thuộc tính max-width chung của section */
+  width: 100%;
+  margin: 0 auto;
+  /* Centering nội dung bên trong dựa theo layout 1200px chung của trang */
+  padding-left: max(2rem, calc((100% - 1200px) / 2 + 2rem)) !important;
+  padding-right: max(2rem, calc((100% - 1200px) / 2 + 2rem)) !important;
+  box-sizing: border-box;
+}
+
+.hero-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.65; /* Độ sáng video tối ưu để thấy rõ chi tiết nền */
+  pointer-events: none;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: 
+    radial-gradient(circle at 20% 40%, rgba(124, 92, 255, 0.2), transparent 50%), /* Glow tím khu vực chữ */
+    radial-gradient(circle at 35% 65%, rgba(34, 211, 238, 0.15), transparent 50%), /* Glow xanh cyan khu vực chữ */
+    linear-gradient(90deg, rgba(5, 8, 22, 0.88) 0%, rgba(5, 8, 22, 0.65) 45%, rgba(8, 10, 30, 0.3) 100%); /* Trái tối hơn để nổi chữ, phải nhẹ hơn để thấy video */
+}
+
+#home .hero-content,
+#home .hero-image {
+  position: relative;
+  z-index: 2;
+}
+
+#home .hero-subtitle,
+#home .hero-title,
+#home .typing-wrapper,
+#home .hero-desc,
+#home .hero-buttons {
+  position: relative;
+  z-index: 3;
+}
+
+/* Nổi bật hóa chữ viết trong Hero Section trên nền video */
+#home .hero-title {
+  color: #ffffff !important;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.95), 0 0 25px rgba(99, 102, 241, 0.35) !important;
+}
+
+/* Tăng cường độ sáng và độ nổi bật của tên Phạm Hồng Triệu */
+#home .hero-title .gradient-text {
+  background: linear-gradient(135deg, #d8b4fe 0%, #818cf8 45%, #22d3ee 100%) !important; /* Tím, Indigo, Cyan sáng rực rỡ */
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 2px 10px rgba(168, 85, 247, 0.5)) drop-shadow(0 2px 15px rgba(6, 182, 212, 0.4)) !important;
+  text-shadow: none !important; /* Tránh bóng chìm đè lên gradient của text trong suốt */
+}
+
+#home .typing-wrapper {
+  color: #f9fafb !important;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.95), 0 0 15px rgba(6, 182, 212, 0.25) !important;
+}
+
+#home .hero-desc {
+  color: #e5e7eb !important; /* Xám trắng sáng, cực kỳ dễ đọc */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+}
+
+#home .hero-subtitle {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* ================= RESPONSIVE HERO BACKGROUND ================= */
+
+@media (max-width: 1024px) {
+  #home {
+    gap: 2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #home {
+    flex-direction: column-reverse !important;
+    text-align: center !important;
+    padding-top: calc(var(--navbar-height) + 40px) !important;
+    padding-bottom: 60px !important;
+    min-height: auto !important;
+    gap: 3rem !important;
+  }
+
+  .hero-bg-video {
+    opacity: 0.45 !important;
+  }
+
+  .hero-bg-overlay {
+    background: 
+      linear-gradient(180deg, rgba(5, 8, 22, 0.9) 0%, rgba(8, 10, 30, 0.75) 60%, rgba(5, 8, 22, 0.85) 100%) !important; /* Overlay dọc tối hơn trên mobile để đọc chữ rõ */
+  }
+}
+
+/* ================= LIGHT MODE IMPROVEMENTS ================= */
+
+/* 1. Nền các section trong Light Mode mềm mại và có chiều sâu */
+:root.light-theme body {
+  background-color: #f8fafc !important; /* Slate-50 */
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.03) 0%, transparent 50%) !important;
+  background-attachment: fixed !important;
+}
+
+:root.light-theme #about {
+  background: linear-gradient(180deg, transparent, rgba(238, 242, 255, 0.45), transparent) !important;
+}
+
+:root.light-theme #skills {
+  background: linear-gradient(180deg, transparent, rgba(245, 243, 255, 0.45), transparent) !important;
+}
+
+:root.light-theme #projects {
+  background: linear-gradient(180deg, transparent, rgba(236, 254, 255, 0.5), transparent) !important;
+}
+
+:root.light-theme #contact {
+  background: linear-gradient(180deg, transparent, rgba(238, 242, 255, 0.45), transparent) !important;
+}
+
+/* 2. Tiêu đề section rõ nét và có chiều sâu */
+:root.light-theme .section-title {
+  background: linear-gradient(135deg, #1e1b4b 0%, #4f46e5 50%, #7e22ce 100%) !important; /* Indigo đậm sang tím đậm */
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 1px 2px rgba(99, 102, 241, 0.15)) !important;
+}
+
+/* 3. Giảm khoảng cách đứt đoạn giữa Hero và About */
+#about {
+  padding-top: 60px !important; /* Giảm từ 100px xuống 60px để liền mạch */
+}
+
+/* 4. Thẻ/Card nổi bật với viền và shadow mềm mại */
+:root.light-theme .stat-card,
+:root.light-theme .skill-category,
+:root.light-theme .project-card,
+:root.light-theme .contact-form-wrapper {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(99, 102, 241, 0.12) !important;
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.05), 0 8px 16px -6px rgba(0, 0, 0, 0.02) !important;
+}
+
+:root.light-theme .stat-card:hover,
+:root.light-theme .skill-category:hover,
+:root.light-theme .project-card:hover {
+  border-color: rgba(99, 102, 241, 0.3) !important;
+  box-shadow: 0 20px 35px -10px rgba(99, 102, 241, 0.12), 0 0 15px rgba(99, 102, 241, 0.06) !important;
+  background: #ffffff !important;
+}
+
+/* 5. Tăng độ rõ nét của chữ nội dung */
+:root.light-theme {
+  --text-primary: #0f172a !important; /* Slate-900 */
+  --text-secondary: #334155 !important; /* Slate-700 */
+  --text-muted: #64748b !important; /* Slate-500 */
+}
+
+:root.light-theme .about-info p {
+  color: #1e293b !important; /* Đậm hơn để dễ đọc trên nền sáng */
+}
+
+:root.light-theme .about-info strong {
+  color: #4f46e5 !important; /* Điểm nhấn tím đậm */
+}
+
+:root.light-theme .stat-label {
+  color: #475569 !important;
+}
+
+:root.light-theme .skill-category-title {
+  color: #1e293b !important;
+}
+
+:root.light-theme .skill-name {
+  color: #334155 !important;
+}
+
+/* 6. Form nhập liệu sáng sủa, sắc nét */
+:root.light-theme .form-control {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  color: #0f172a !important;
+}
+
+:root.light-theme .form-control:focus {
+  background: #ffffff !important;
+  border-color: #4f46e5 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+}
+
+:root.light-theme .form-label {
+  color: #334155 !important;
+  font-weight: 500 !important;
+}
+
+/* 7. Thông tin liên hệ và biểu tượng */
+:root.light-theme .info-item i {
+  background: rgba(99, 102, 241, 0.08) !important;
+  color: #4f46e5 !important;
+}
+
+:root.light-theme .social-icon {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(99, 102, 241, 0.15) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03) !important;
+}
+
+:root.light-theme .social-icon:hover {
+  background: var(--gradient-primary) !important;
+  border-color: transparent !important;
+}
+
+:root.light-theme .social-icon:hover i {
+  color: #ffffff !important;
+}
+
+/* 8. Tuyết rơi mờ ảo, không cản chữ */
+:root.light-theme .snowflake {
+  color: rgba(99, 102, 241, 0.12) !important; /* Opacity giảm mạnh */
+  text-shadow: 0 0 4px rgba(34, 211, 238, 0.08) !important;
+}
+
+/* ================= SKILL BADGES DESIGN ================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 2.2rem !important;
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 1.05rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+  user-select: none;
+}
+
+.skill-badge i {
+  font-size: 1.05rem;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effects for badges */
+.skill-badge:hover {
+  transform: translateY(-3px);
+  background: rgba(99, 102, 241, 0.08);
+  border-color: var(--color-primary);
+  color: var(--text-primary);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.2), 0 0 10px rgba(99, 102, 241, 0.1);
+}
+
+.skill-badge:hover i {
+  transform: scale(1.18) rotate(6deg);
+}
+
+/* Specific styling adjust for Light theme badge hover */
+:root.light-theme .skill-badge {
+  background: rgba(15, 23, 42, 0.03) !important;
+  border-color: rgba(99, 102, 241, 0.08) !important;
+  color: #475569 !important;
+}
+
+:root.light-theme .skill-badge:hover {
+  background: rgba(99, 102, 241, 0.07) !important;
+  border-color: #4f46e5 !important;
+  color: #0f172a !important;
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.12) !important;
+}
+
+/* Responsive columns override */
+@media (max-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}
+
